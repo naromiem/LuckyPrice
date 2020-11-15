@@ -80,15 +80,19 @@ $(document).ready(function() {
                         console.log(response.results);
                         $("#newRelease").empty();
                         let releaseTitle = response.results[0].name;
-                        let releaseSect = $('<p>').text("New Release :" + releaseTitle);
+                        let releaseSect = $('<p>').text("New Release : " + releaseTitle);
                         releaseSect.addClass("section");
                         $("#newRelease").append(releaseSect);
                         let releaseDay = response.results[0].released;
-                        let dateSect = $('<p>').text("Date Released :" + releaseDay);
+                        let dateSect = $('<p>').text("Date Released : " + releaseDay);
                         dateSect.addClass("section");
                         $("#newRelease").append(dateSect);
                     })
+                    $(".modal").css("display", "block");
                 });
+                $('.modal-close').click(function(){
+                    $(".modal").css("display", "none");
+                })
             metaData = () => {
                 let metaLink = data[1].metacriticLink;
                 $('#meta-link').attr("href", "https://www.metacritic.com/" + metaLink);
