@@ -16,39 +16,58 @@
         <li class="luckyPrice"><i class="fas fa-dice"></i> LUCKY PRICE</li>
         <li id="searches"></li>
         <li><input class="input is-rounded is-primary is-mobile" id="game-text" type="text" placeholder="Game Search"></li>
-        <li><button class="button is-primary is-focused is-mobile" id="search">Search <i class="fas fa-search"></i> </button></li>
+        <li><button class="button is-primary is-focused is-mobile" id="search"><a href="#meta-link">Search</a><i class="fas fa-search"></i> </button></li>
         <li><button class="button is-primary is-focused is-mobile" id="news">New Releases <i class="far fa-newspaper"></i> </button></li>
         <li></li>
       </ul>
-      <div class="modal">
+      <div class="modal is-mobile">
         <div class="modal-background"></div>
-        <div class="modal-content">
+        <div class="modal-content is-mobile">
           <!-- Any other Bulma elements you want -->
-          <h2 class="title" id="newRelease"></h2>
-          <p class="subtitle" id="releaseDate"></p>
+          <div class="card">
+            <header class="card-header is-centered is-mobile">
+              <p class="card-header-title is-small">
+                New game releases
+              </p>
+              <a href="#" class="card-header-icon is-centered is-mobile" aria-label="more options">
+                <span class="icon">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </a>
+            </header>
+            <div class="card-content is-centered is-mobile">
+              <div class="content" id="newRelease">
+                <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
+                <div class="content" id="releaseDate"></div>
+                <br>
+              </div>
+            </div>
+            <footer class="card-footer is-small">
+              <a href="#" class="card-footer-item">Save</a>
+              <a href="#" class="card-footer-item">Delete</a>
+            </footer>
+          </div>
         </div>
         <button class="modal-close is-large" aria-label="close"></button>
       </div>
     </div>
-    <div class="animation-area">
-      <div class="section is-mobile" id="newRelease"></div>
-      <div class="section is-mobile" id="releaseDate"></div>
+    <div class="animation-area column is-mobile">
       <ul class="box-area">
         <div class="card is-mobile">
-          <div class="card-content">
-            <div class="media">
-              <div class="media-left">
-                <figure class="image is-84x84" id="image">
+          <div class="card-content is-mobile">
+            <div class="media is-mobile">
+              <div class="media-left is-mobile">
+                <figure class="image is-small" id="image">
                   <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
                 </figure>
               </div>
-              <div class="media-content">
+              <div class="media-content is-mobile">
                 <p class="title is-4" id="display"></p>
-                <p class="subtitle is-4" id="price"></p>
-                <p class="subtitle is-4" id="retail"></p>
-                <p class="subtitle is-4" id="rating-count"></p>
-                <p class="subtitle is-4" id="rating-percent"></p>
-                <p class="subtitle is-4" id="rating-text"></p>
+                <p class="is-small is-2" id="price"></p>
+                <p class="is-small is-2" id="retail"></p>
+                <p class="is-small is-2" id="rating-count"></p>
+                <p class="is-small is-2" id="rating-percent"></p>
+                <p class="is-small is-2" id="rating-text"></p>
               </div>
             </div>
             <div class="content"> <a id="meta-link" onclick="metaData()" >MetaCritic</a>.

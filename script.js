@@ -79,14 +79,14 @@ $(document).ready(function() {
                     }).then(function(response) {
                         console.log(response.results);
                         $("#newRelease").empty();
-                        let releaseTitle = response.results[0].name;
-                        let releaseSect = $('<p>').text("New Release : " + releaseTitle);
+                        let releaseTitle = (response.results[7].name);
+                        let releaseSect = $('<p>').text("New Game Release : " + releaseTitle);
                         releaseSect.addClass("section");
                         $("#newRelease").append(releaseSect);
-                        let releaseDay = response.results[0].released;
+                        let releaseDay = response.results[7].released;
                         let dateSect = $('<p>').text("Date Released : " + releaseDay);
                         dateSect.addClass("section");
-                        $("#newRelease").append(dateSect);
+                        $("#releaseDate").append(dateSect);
                     })
                     $(".modal").css("display", "block");
                 });
