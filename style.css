@@ -26,13 +26,12 @@ body{
     color: red;
     font-size: 3rem;
 }
-html{
-    scroll-behavior: smooth;
-}
 .card{
     background-color: transparent;
     margin-top: 35%;
     padding: 5px;
+    position: relative;
+    top: 40px;
 }
 .banner-text{
     width: 100%;
